@@ -19,3 +19,8 @@ This project includes a registration page for user sign-up and a music website s
 1. HTML, CSS for front-end
 2. PHP for server-side scripting
 3. MySQL for database management via phpMyAdmin
+
+## Screenshots
+<img width="1440" alt="music_image1" src="https://github.com/sanyashree/HARMONIQUE/assets/149993907/1aafc5ae-343d-45db-aff3-5ebb3d75dfd4">
+<img width="1440" alt="music_image2" src="https://github.com/sanyashree/HARMONIQUE/assets/149993907/21592840-6e0e-497d-af32-57a8ded7a4a1">
+<img width="1440" alt="music_image3" src="https://github.com/sanyashree/HARMONIQUE/assets/149993907/182cbbde-cbae-409c-a9a7-703b2954f328">
