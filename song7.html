@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="songs.css">
+</head>
+<body>
+	<div id="title"><image src="images/title2.jpg" alt="title" class="center"></image></div>
+	<div id="whole">
+		<h3>EPIC COLORS</h3>
+		<image src="images/pic7.jpg" height="300" width="450"></image>
+		<div class="audio">
+			<audio id="myAudio" controls >
+				<!-- <source src="horse.ogg" type="audio/ogg"> -->
+				<source src="music/epic-colors.mp3" type="audio/mpeg">
+				<!-- Your browser does not support the audio element. -->
+			</audio>
+		</div>
+		<div class="playbar">
+			<div class="songbuttons">
+				<div class="songinfo"></div>
+				<img src="images/play.svg" alt="" id="playBtn">
+				<div class="songtime" id="songTime">0:00</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+    const myAudio = document.getElementById("myAudio");
+    const playBtn = document.getElementById("playBtn");
+    const songTime = document.getElementById("songTime");
+        
+    playBtn.addEventListener("click", function() {
+        if (myAudio.paused) {
+            myAudio.play();
+            playBtn.src = "images/pause.svg";
+        } else {
+            myAudio.pause();
+            playBtn.src = "images/play.svg";
+        }
+    });
+        
+    myAudio.addEventListener("timeupdate", function() {
+        const currentTime = myAudio.currentTime;
+        const duration = myAudio.duration;
+        const minutes = Math.floor(currentTime / 60);
+        const seconds = Math.floor(currentTime % 60);
+        const minutesDuration = Math.floor(duration / 60);
+        const secondsDuration = Math.floor(duration % 60);
+        songTime.textContent = `${minutes}:${seconds} / ${minutesDuration}:${secondsDuration}`;
+    });  
+</script>
+</body>
+</html>

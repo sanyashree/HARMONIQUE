@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> MUSIC WEBSITE </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title" class="center">
+        <img src="images/title2.jpg" alt="Title">
+    </div>
+
+    <div id="topsongs" class="clearfix">
+        <h3>TOP SONGS</h3>
+    </div>
+    <div id="newrelease" class="clearfix">
+        <h3>NEW RELEASE</h3>
+    </div>
+
+    <script>
+        function addMedia() {
+            var songs = [
+                { title: "ONE LAST TIME", href: "song1.html", image: "images/pic1.jpg" },
+                { title: "REIMAGINE", href: "song2.html", image: "images/pic2.jpg" },
+                { title: "THE SHADOW OF A CHERRY TREE", href: "song3.html", image: "images/pic3.jpg" },
+                { title: "MEMORIES", href: "song4.html", image: "images/pic4.jpg" },
+                { title: "A FOLK STORY", href: "song5.html", image: "images/pic5.jpg" },
+                { title: "BLACK BOX CYBERPUNK", href: "song6.html", image: "images/pic6.jpg" },
+                { title: "EPIC COLOURS", href: "song7.html", image: "images/pic7.jpg" },
+                { title: "LAY IT OUT", href: "song8.html", image: "images/pic8.jpg" },
+                { title: "GO BACK", href: "song9.html", image: "images/pic9.jpg" },
+                { title: "HAPPY DAY", href: "song10.html", image: "images/pic10.jpg" },
+                { title: "PLEASE CALM MY MIND", href: "song11.html", image: "images/pic11.jpg" },
+                { title: "THE CRADLE OF YOUR SOUL", href: "song12.html", image: "images/pic12.jpg" }
+            ];
+
+            var topsongsDiv = document.getElementById("topsongs");
+            var newreleaseDiv = document.getElementById("newrelease");
+            songs.slice(0, 6).forEach(function(song) {
+                addSong(topsongsDiv, song.title, song.href, song.image);
+            });
+            songs.slice(6).forEach(function(song) {
+                addSong(newreleaseDiv, song.title, song.href, song.image);
+            });
+        }
+        function addSong(parent, title, href, image) {
+            var songContainer = document.createElement("div");
+            songContainer.className = "song_container";
+
+            var img = document.createElement("img");
+            img.src = image;
+            img.alt = title + " Image";
+            img.className = "song_image";
+            songContainer.appendChild(img);
+
+            var a = document.createElement("a");
+            a.href = href;
+            a.target = "_blank";
+            var button = document.createElement("button");
+            button.textContent = title;
+            button.className = "song_title";
+            a.appendChild(button);
+            songContainer.appendChild(a);
+
+            parent.appendChild(songContainer);
+        }
+        addMedia();
+    </script>
+</body>
+</html>
