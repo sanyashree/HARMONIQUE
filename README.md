@@ -1,5 +1,4 @@
 ## HARMONIQUE - The Music Website
-
 This project includes a registration page for user sign-up and a music website showcasing top songs and new releases.
 
 ## Features
