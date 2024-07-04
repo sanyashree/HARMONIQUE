@@ -114,6 +114,9 @@
 </head>
 
 <body>
+    <div id="title" class="center">
+        <img src="images/title2.jpg" alt="Title">
+    </div>
     <h2>Registration Form</h2>
     <form method="post">
         <label for="username">Username:</label>
